@@ -67,7 +67,6 @@ namespace ToDoList_FRANCISCO.Controllers
         }
 
         [HttpPost]
-        [ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
