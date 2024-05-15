@@ -66,7 +66,9 @@ namespace ToDoList_FRANCISCO.Controllers
             return View(item);
         }
 
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
             _service.Delete(id);
